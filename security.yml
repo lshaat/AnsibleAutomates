@@ -1,5 +1,6 @@
 ---
 - hosts: linux
+  become: yes
   name: Secure my Linux Estate
   tasks:
   - name: Update bash - RHEL
@@ -51,7 +52,7 @@
   - name: Find logs
     find:
       paths: /var/log/
-      patterns: 'waagent.log'
+      patterns: '*.log'
       recurse: yes
     register: _logs
 
