@@ -11,7 +11,7 @@
   tasks:
   - name: Enable Windows Firewall
     win_firewall:
-      state: disabled 
+      state: enabled 
       profiles:
         - Private
         - Domain
